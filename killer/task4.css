@@ -1,0 +1,111 @@
+@import url(cssbase.css);
+@import url(layout.css);
+h1, h2, h3, h4, h5, h6, p {
+    color: #FFFFFF;
+    font-weight: normal; }
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #34BEDE;
+    border-bottom: solid 1px #FFFFFF;
+}
+header .list {
+    top: 0;
+    width: 25px; }
+header .off {
+    top: 0;
+    right: 0;
+    width: 25px; }
+header h2 {
+    padding: 5px 0; }
+
+body {
+    background-color: #34BEDE;
+    padding-bottom: 200px; }
+body h3 {
+    padding: 2px 0;
+    color: #000000; }
+body .bak-lb {
+    top: 40px;
+    width: 100%;
+    z-index: 2;
+    background-color: #BAE9F4; }
+body .play {
+    top: 43px;
+    right: 0;
+    height: 20px; }
+body .audio {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    z-index: 3;
+    opacity: 0.05;
+    width: 1px; }
+body .t {
+    top: 35px;
+    width: 0;
+    height: 0;
+    border: 5px solid #000;
+    border-color: #BAE9F4 transparent transparent transparent; }
+body .pof1 {
+    width: 100%;
+    top: 72px;
+    background-color: #34BEDE; }
+body .box3 {
+    top: 50px;
+    margin: 20px 6%;
+    width: 20%;
+    height: 65px;
+    float: left; }
+.element {
+    display: none;
+    position: relative;
+    top: 10px;
+    right: 5px;
+    width: 120%;
+    height: 50%; }
+
+.c1, .c2, .c3, .c4 {
+    display: inline-block;
+    width: 20%;
+    height: 50%;
+    background-size: 100%;
+    background-position: center; }
+
+.c1 {
+    background-image: url(1.png); }
+
+.c2 {
+    background-image: url(2.png); }
+
+.c3 {
+    background-image: url(3.png); }
+
+.c4 {
+    background-image: url(4.png); }
+
+.box3-t {
+    width: 100%;
+    height: 25px;
+    padding-top: 20px;
+    background-color: #F3C881; }
+
+.box3-b {
+    width: 100%;
+    padding-top: 10px;
+    height: 10px;
+    background-color: #82AF9B; }
+
+footer {
+    width: 100%;
+    height: 70px;
+    background-color: #34BEDE; }
+.fot-btn {
+    width: 80%;
+    height: 40px;
+    margin: 20px 10%;
+    color: #FFFFFF;
+    border: none;
+    font-size: 20px;
+    background-color: #F8B445; }

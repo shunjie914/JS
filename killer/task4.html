@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>法官日记</title>
+    <link rel="stylesheet" href="cssreset.css">
+    <link rel="stylesheet" href="task4.css">
+    <script src="jquery.min.js"></script>
+    <style>
+        .box3{display: none}
+    </style>
+</head>
+<body>
+<header class="fixt">
+    <img src="list.png" class="img poa list">
+    <div class="box1 tc">
+        <h2>法官日记</h2>
+    </div>
+    <img src="off.png" class="img poa off">
+</header>
+<div class="fl" style="padding-bottom: 150px;width: 100%">
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+    <div class="box3 por">
+        <div class="box3-t tc">水民</div>
+        <div class="box3-b tc">1号</div>
+    </div>
+</div>
+<footer class="fixb">
+    <a href=""><button type="submit" class="fot-btn">法官台本</button></a>
+</footer>
+<script>
+    var arrary=sessionStorage['narrary'];
+    var num=$("div.box3");
+    var id=$(".box3-t");
+    var number=$(".box3-b");
+    for (var i=0,j=0;i+1<arrary.length;i+=3,j++){
+        num[j].style.display='block';
+        id[j].innerHTML=arrary[i]+arrary[i+1];
+        number[j].innerHTML=j+1+"号";
+    }
+</script>
+
+</body>
+</html>
