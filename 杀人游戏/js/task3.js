@@ -23,3 +23,6 @@ function times(a,b) {
         $('#id').html('法官查看');
     }
 }
+function tr () {
+	window.location.href='task2.html'
+}

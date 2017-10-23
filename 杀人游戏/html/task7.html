@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结果</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../css/cssreset.css">
+    <link rel="stylesheet" href="../css/task7.css">
+    <script src="../js/jquery.min.js"></script>
+    <style>
+        .box-ps {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<header class="tc fixt">
+    <button type="button" class="hed-btn-l poa"></button>
+    <h2>游戏结果</h2>
+    <button type="button" class="hed-btn-r poa"></button>
+</header>
+<main>
+    <div class="box1 tc" style="height: 200px;padding-top: 20px;">
+        <img src="../img/coverage1.png" class="img img1"><br>
+        <img src="../img/coverage2.png" class="img img2 por"><br>
+        <span class="tet por">游戏结束</span>
+        <h3 class="h3 por tl">剩余人数</h3>
+        <h4 class="tl por" style="float: left;width: 45%;">杀手：<span id="kill"></span></h4>
+        <h4 class="tl por" style="float: left;width: 45%;">村民：<span id="vill"></span></h4>
+    </div>
+    <div class="box1 tl box-ps" style="display: block;">
+        <h5>第 1 天 </h5>
+        <h6>晚上：<span class="enum"></span>号被杀手杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+        <h6>白天：<span class="enum"></span>号被投票杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+    </div>
+    <div class="box1 tl box-ps">
+        <h5>第 2 天</h5>
+        <h6>晚上：<span class="enum"></span>号被杀手杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+        <h6>白天：<span class="enum"></span>号被投票杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+    </div>
+    <div class="box1 tl box-ps">
+        <h5>第 3 天 </h5>
+        <h6>晚上：<span class="enum"></span>号被杀手杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+        <h6>白天：<span class="enum"></span>号被投票杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+    </div>
+    <div class="box1 tl box-ps">
+        <h5>第 4 天 </h5>
+        <h6>晚上：<span class="enum"></span>号被杀手杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+        <h6>白天：<span class="enum"></span>号被投票杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+    </div>
+    <div class="box1 tl box-ps">
+        <h5>第 5 天 </h5>
+        <h6>晚上：<span class="enum"></span>号被杀手杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+        <h6>白天：<span class="enum"></span>号被投票杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+    </div>
+    <div class="box1 tl box-ps">
+        <h5>第 6 天 </h5>
+        <h6>晚上：<span class="enum"></span>号被杀手杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+        <h6>白天：<span class="enum"></span>号被投票杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+    </div>
+    <div class="box1 tl box-ps">
+        <h5>第 7 天 </h5>
+        <h6>晚上：<span class="enum"></span>号被杀手杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+        <h6>白天：<span class="enum"></span>号被投票杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+    </div>
+    <div class="box1 tl box-ps">
+        <h5>第 8 天 </h5>
+        <h6>晚上：<span class="enum"></span>号被杀手杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+        <h6>白天：<span class="enum"></span>号被投票杀死，<span class="enum"></span>号是<span class="ehtml"></span></h6>
+    </div>
+</main>
+<footer class="fixb">
+    <button type="button" class="fot-btn left" onclick="window.location.href='task1.html'">再来一局</button>
+    <button type="button" class="fot-btn right">上传并分享</button>
+</footer>
+<script>
+    var num=$('.enum');
+    var html=$('.ehtml');
+    $('#kill').html(sessionStorage['liveKill']);
+    $('#vill').html(sessionStorage['liveVill']);
+    for(var i=0,j=0;i<33;i+=2,j++){
+        if(sessionStorage['endnum'+j+'']) {
+            num[i].innerHTML = sessionStorage['endnum' + j + ''];
+            num[i + 1].innerHTML = sessionStorage['endnum' + j + ''];
+        }
+        if(sessionStorage['endhtml'+j+'']) {
+            html[j].innerHTML = sessionStorage['endhtml' + j + ''];
+            var b=j;
+        }
+    }
+    (function () {
+        var a=$('.box-ps');
+        var dy=sessionStorage['day'];
+        for (k = 0, m = 0; k < dy.length; k += 2, m++) {
+                a[m].style.display = "block";
+            }
+            if(b%2===0){
+                a[m].style.display = "block";
+            }
+    }());
+</script>
+</body>
+</html>

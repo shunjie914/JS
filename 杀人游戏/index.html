@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;}
+    	body {
+    		text-align: center;
+    		background-color: #EFF0F1;
+    	}
+    	button {
+    		margin-top: 10px;
+    		width: 70%;
+    		height: 70px;
+    		font-size: 18px;
+    		font-weight: bold;
+    		border: none;
+    		border-radius: 10px;
+    		color: #FFFFFF;
+    		background-color: #34BEDE;
+    	}
+    	.up1,.up2{
+    		display: block;
+    		width: 20px;
+    		height: 20px;
+    		border-radius: 50%;
+    		background-color: #34BEDE;
+    	}
+    	.up2 {
+    		width: 15px;
+    		height: 15px;
+    	}
+    </style>
+</head>
+<body>
+	<div style="float: left;height: 60px;width: 100%;background: #34BEDE;padding-top: 10px;">
+		<span style="float: left;line-height: normal;margin: 9px 0 12px 12px;padding: 7px;font-weight: bold;color: #FFFFFF;background-color: rgba(240, 240, 240,0.5);border-radius: 10px;">KillGame by TTiceack</span>
+		<span id="next" style="float: right;line-height: normal;margin: 9px;padding: 7px;font-weight: bold;color: #FEAA59;background-color: rgba(240, 240, 240,0.5);border-radius: 10px;" onclick="tr()">点击3秒后自动跳转</button>
+	</div>
+	<img src="img/b93d27f9ee8a4f4583c7df567ba7a091_th.gif" style="width: 100%;">
+	<div style="width: 90%;float: left;background-color: #FFFFFF;margin: 20px 5%;border-radius: 10px;position: fixed;bottom: 10px;">
+		<button>准备好一起哈啤了吗？</button>
+		<span class="up1" style="margin-left: 60%;margin-top:10px;"></span>
+		<span class="up2" style="margin-left: 65%;margin-top:10px;"></span>
+		<img src="img/luf.png" style="display: block;width: 50px;margin-left: 68%;margin-top: 10px;">
+	</div>
+	<script>
+		function tr(){
+			setTimeout("window.location.href='html/task1.html'",3000);
+			document.getElementById('next').style.display='none';
+		}
+    </script>
+</body>
+</html>

@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 header {
     width: 100%;
-    height: 50px;
+    padding: 10px 0;
     background-color: #34BEDE;
     border-bottom: solid 1px #FFFFFF;
 }
@@ -18,7 +18,10 @@ header .off {
     right: 0;
     width: 25px; }
 header h2 {
-    padding: 5px 0; }
+	text-align: center;
+	font-size: 21px;
+	font-weight: 700;
+    line-height: normal; }
 
 body {
     background-color: #34BEDE;
@@ -56,7 +59,7 @@ body .box3 {
     top: 50px;
     margin: 20px 6%;
     width: 20%;
-    height: 65px;
+    height: 75px;
     float: left; }
 .element {
     display: none;
@@ -66,34 +69,15 @@ body .box3 {
     width: 120%;
     height: 50%; }
 
-.c1, .c2, .c3, .c4 {
-    display: inline-block;
-    width: 20%;
-    height: 50%;
-    background-size: 100%;
-    background-position: center; }
-
-.c1 {
-    background-image: url(1.png); }
-
-.c2 {
-    background-image: url(2.png); }
-
-.c3 {
-    background-image: url(3.png); }
-
-.c4 {
-    background-image: url(4.png); }
-
 .box3-t {
     width: 100%;
     height: 25px;
-    padding-top: 20px;
+    padding-top: 25px;
     background-color: #F3C881; }
 
 .box3-b {
     width: 100%;
-    padding-top: 10px;
+    padding-top: 15px;
     height: 10px;
     background-color: #82AF9B; }
 

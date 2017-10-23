@@ -35,7 +35,7 @@ function key() {
     num=parseInt(a);
     kill=document.getElementById('num1');
     vill=document.getElementById('num2');
-    if (num&&num>=3&&num<=18) {
+    if (num&&num>3&&num<=18) {
         if (num&&num>=3&&num<=8){
             good=num-=1;
             bad=1;
@@ -69,6 +69,10 @@ function key() {
         kill.innerHTML=bad;
         vill.innerHTML=good;
         sessionStorage['narrary']=narrary;
+        function turn() {
+            window.location.href='task3.html';
+        }
+        this.setTimeout(turn,1000);
     }
     else {
         confirm("请输入正确数");
@@ -81,7 +85,6 @@ function kk() {
 function next() {
     if (parseInt($('#nn').val())){
         kk();
-        window.location.href='task3.html';
     }
     else {confirm("请输入正确数");}
 }

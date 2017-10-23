@@ -1,0 +1,105 @@
+@import url(layout.css);
+@import url(cssbase.css);
+h1, h2, h3, h4, h5, h6, p {
+  color: #FFFFFF;
+  font-weight: normal; }
+
+body {
+  padding-top: 50px;
+  padding-bottom: 70px; }
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #34BEDE;
+  border-bottom: solid 1px #FFFFFF; }
+  header h2 {
+    padding: 25px 0; }
+  header .hed-btn-l {
+    top: 13px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #34BEDE;
+    border: none;
+    background-size: 100%;
+    background-image: url(../img/home3.png);
+    background-repeat: no-repeat; }
+  header .hed-btn-r {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #34BEDE;
+    border: none;
+    background-size: 100%;
+    background-image: url(../img/help.png);
+    background-repeat: no-repeat; }
+  header h2 {
+  	font-weight: 700;
+ 		font-size: 21px;
+  }
+
+main {
+  background-color: #34BEDE; }
+  .box1 {
+    height: 230px; }
+  main .img1 {
+    width: 42.5px; }
+  main .img2 {
+    bottom: 70px;
+    width: 175px; }
+  main .tet {
+    bottom: 97px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold; }
+  main h3 {
+    color: #F8B445;
+    bottom: 80px;
+    padding: 10px 0;
+    font-weight: 600;
+    line-height: 20px; }
+  main h4 {
+    bottom: 80px;
+    padding: 8px 0;
+    word-spacing: 10.1px; }
+  main .box-ps {
+    color: #000000;
+    height: auto;
+    padding-top: 10px;
+    background-color: #FFFFFF;
+    border-bottom: solid 1px #EFF0F1; }
+    main .box-ps h5 {
+      font-size: 15px;
+      color: #000000;
+      padding: 8px 0;
+      margin-bottom: 5px; }
+    .time {
+      float: right;
+      color: #EFF0F1; }
+    main .box-ps h6 {
+      color: #BDBEBF;
+      padding: 8px 0; }
+
+footer {
+  width: 100%;
+  background: rgba(153, 223, 240, 0.7);
+  height: 70px; }
+  footer .fot-btn {
+    width: 45%;
+    height: 50px;
+    margin: 10px 2%;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px; }
+  footer .left {
+  	font-size: 16px;
+    font-weight: bold;
+    background-color: #F37072; }
+  footer .right {
+  	font-size: 16px;
+    font-weight: bold;
+    background-color: #F8B445; }
+
+/*# sourceMappingURL=task3.cssp */

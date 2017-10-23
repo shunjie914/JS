@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>法官台本</title>
+    <link rel="stylesheet" href="../css/task5.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/javascript-state-machine.js"></script>
+    <style>
+        .day {
+            display: none;
+        }
+        .died {
+            display: none;
+            color: #000000;
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h3>法官台本</h3>
+</header>
+<main>
+    <div class="day" style="display: block;">
+        <h4>第一天<button class="pull" onclick="$('#tr1').slideToggle()"></button></h4>
+        <div class="pull-down" id="tr1" style="display: block;">
+            <h6><span class="triangle"></span></h6>
+            <div class="bor-l">
+                <img src="../img/moon.png" class="moon">
+                <img src="../img/sun.png" class="moon">
+            </div>
+            <div class="bord-r">
+                <h5 class="kill" onclick="fsm.kill()"><span class="triangle-l"></span>杀手杀人</h5>
+                <h2 class="died"><span class="dieN"></span>号被杀手杀死，<span class="dieN"></span>号的身份是<span class="dieid"></span></h2>
+                <h5 class="diedSay" onclick="fsm.onBeforSay()"><span class="triangle-l"></span>亡灵发表遗言</h5>
+                <h5 class="playerSay" onclick="fsm.onBeforGuess()"><span class="triangle-l"></span>玩家依次发言</h5>
+                <h5 class="allVote" onclick="fsm.vote()"><span class="triangle-l"></span>全民投票</h5>
+            </div>
+        </div>
+    </div>
+    <div class="day">
+        <h4>第二天<button class="pull" onclick="$('#tr2').slideToggle()"></button></h4>
+        <div class="pull-down" id="tr2">
+            <h6><span class="triangle"></span></h6>
+            <div class="bor-l">
+                <img src="../img/moon.png" class="moon">
+                <img src="../img/sun.png" class="moon">
+            </div>
+            <div class="bord-r">
+                <h5 class="kill" onclick="fsm.kill()"><span class="triangle-l"></span>杀手杀人</h5>
+                <h2 class="died"><span class="dieN"></span>号被杀手杀死，<span class="dieN"></span>号的身份是<span class="dieid"></span></h2>
+                <h5 class="diedSay" onclick="fsm.onBeforSay()"><span class="triangle-l"></span>亡灵发表遗言</h5>
+                <h5 class="playerSay" onclick="fsm.onBeforGuess()"><span class="triangle-l"></span>玩家依次发言</h5>
+                <h5 class="allVote" onclick="fsm.vote()"><span class="triangle-l"></span>全民投票</h5>
+            </div>
+        </div>
+    </div>
+    <div class="day">
+        <h4>第三天<button class="pull" onclick="$('#tr3').slideToggle()"></button></h4>
+        <div class="pull-down" id="tr3">
+            <h6><span class="triangle"></span></h6>
+            <div class="bor-l">
+                <img src="../img/moon.png" class="moon">
+                <img src="../img/sun.png" class="moon">
+            </div>
+            <div class="bord-r">
+                <h5 class="kill" onclick="fsm.kill()"><span class="triangle-l"></span>杀手杀人</h5>
+                <h2 class="died"><span class="dieN"></span>号被杀手杀死，<span class="dieN"></span>号的身份是<span class="dieid"></span></h2>
+                <h5 class="diedSay" onclick="fsm.onBeforSay()"><span class="triangle-l"></span>亡灵发表遗言</h5>
+                <h5 class="playerSay" onclick="fsm.onBeforGuess()"><span class="triangle-l"></span>玩家依次发言</h5>
+                <h5 class="allVote" onclick="fsm.vote()"><span class="triangle-l"></span>全民投票</h5>
+        </div>
+        </div>
+    </div>
+    <div class="day">
+        <h4>第四天<button class="pull" onclick="$('#tr4').slideToggle()"></button></h4>
+        <div class="pull-down" id="tr4">
+            <h6><span class="triangle"></span></h6>
+            <div class="bor-l">
+                <img src="../img/moon.png" class="moon">
+                <img src="../img/sun.png" class="moon">
+            </div>
+            <div class="bord-r">
+                <h5 class="kill" onclick="fsm.kill()"><span class="triangle-l"></span>杀手杀人</h5>
+                <h2 class="died"><span class="dieN"></span>号被杀手杀死，<span class="dieN"></span>号的身份是<span class="dieid"></span></h2>
+                <h5 class="diedSay" onclick="fsm.onBeforSay()"><span class="triangle-l"></span>亡灵发表遗言</h5>
+                <h5 class="playerSay" onclick="fsm.onBeforGuess()"><span class="triangle-l"></span>玩家依次发言</h5>
+                <h5 class="allVote" onclick="fsm.vote()"><span class="triangle-l"></span>全民投票</h5>
+            </div>
+        </div>
+    </div>
+    <div class="day">
+        <h4>第五天<button class="pull" onclick="$('#tr5').slideToggle()"></button></h4>
+        <div class="pull-down" id="tr5">
+            <h6><span class="triangle"></span></h6>
+            <div class="bor-l">
+                <img src="../img/moon.png" class="moon">
+                <img src="../img/sun.png" class="moon">
+            </div>
+            <div class="bord-r">
+                <h5 class="kill" onclick="fsm.kill()"><span class="triangle-l"></span>杀手杀人</h5>
+                <h2 class="died"><span class="dieN"></span>号被杀手杀死，<span class="dieN"></span>号的身份是<span class="dieid"></span></h2>
+                <h5 class="diedSay" onclick="fsm.onBeforSay()"><span class="triangle-l"></span>亡灵发表遗言</h5>
+                <h5 class="playerSay" onclick="fsm.onBeforGuess()"><span class="triangle-l"></span>玩家依次发言</h5>
+                <h5 class="allVote" onclick="fsm.vote()"><span class="triangle-l"></span>全民投票</h5>
+            </div>
+        </div>
+    </div>
+    <div class="day">
+        <h4>第六天<button class="pull" onclick="$('#tr6').slideToggle()"></button></h4>
+        <div class="pull-down" id="tr6">
+            <h6><span class="triangle"></span></h6>
+            <div class="bor-l">
+                <img src="../img/moon.png" class="moon">
+                <img src="../img/sun.png" class="moon">
+            </div>
+            <div class="bord-r">
+                <h5 class="kill" onclick="fsm.kill()"><span class="triangle-l"></span>杀手杀人</h5>
+                <h2 class="died"><span class="dieN"></span>号被杀手杀死，<span class="dieN"></span>号的身份是<span class="dieid"></span></h2>
+                <h5 class="diedSay" onclick="fsm.onBeforSay()"><span class="triangle-l"></span>亡灵发表遗言</h5>
+                <h5 class="playerSay" onclick="fsm.onBeforGuess()"><span class="triangle-l"></span>玩家依次发言</h5>
+                <h5 class="allVote" onclick="fsm.vote()"><span class="triangle-l"></span>全民投票</h5>
+            </div>
+        </div>
+    </div>
+    <div class="day">
+        <h4>第七天<button class="pull" onclick="$('#tr7').slideToggle()"></button></h4>
+        <div class="pull-down" id="tr7">
+            <h6><span class="triangle"></span></h6>
+            <h5 class="kill" onclick="fsm.kill()">杀手杀人</h5>
+            <h5 class="died"><span class="dieN"></span>号被杀手杀死，<span class="dieN"></span>号的身份是<span class="dieid"></span></h5>
+            <h5 class="diedSay" onclick="fsm.onBeforSay()">亡灵发表遗言</h5>
+            <h5 class="playerSay" onclick="fsm.onBeforGuess()">玩家依次发言</h5>
+            <h5 class="allVote" onclick="fsm.vote()">全民投票</h5>
+        </div>
+    </div>
+    <div class="day">
+        <h4>第八天<button class="pull" onclick="$('#tr8').slideToggle()"></button></h4>
+        <div class="pull-down" id="tr8">
+            <h6><span class="triangle"></span></h6>
+            <div class="bor-l">
+                <img src="../img/moon.png" class="moon">
+                <img src="../img/sun.png" class="moon">
+            </div>
+            <div class="bord-r">
+                <h5 class="kill" onclick="fsm.kill()"><span class="triangle-l"></span>杀手杀人</h5>
+                <h2 class="died"><span class="dieN"></span>号被杀手杀死，<span class="dieN"></span>号的身份是<span class="dieid"></span></h2>
+                <h5 class="diedSay" onclick="fsm.onBeforSay()"><span class="triangle-l"></span>亡灵发表遗言</h5>
+                <h5 class="playerSay" onclick="fsm.onBeforGuess()"><span class="triangle-l"></span>玩家依次发言</h5>
+                <h5 class="allVote" onclick="fsm.vote()"><span class="triangle-l"></span>全民投票</h5>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <button type="button" class="fot-btn left" onclick="over()">结束游戏</button>
+    <button type="button" class="fot-btn right" onclick="window.location.href='task4.html'">法官台本</button>
+</footer>
+<script src="../js/task5.js"></script>
+<script>
+    var fsm=new StateMachine ({
+        init: 'first',
+        transitions: [
+            { name: 'kill',  from: 'first',  to: 'second' },
+            { name: 'say', from: 'first', to: 'third' },
+            { name: 'guess',  from: 'third',    to: 'forth' },
+            { name: 'vote', from: 'forth', to: 'first' }
+        ],
+        methods:{
+            onAfterKill:function () {
+                old();
+                check();
+                window.location.href="task6.html";
+            },
+            onBeforSay:function () {
+                if(confirm('请死者表明身份，并发表遗言')){
+                    fsm.say();
+                    old();
+                    check();
+                }
+            },
+            onBeforGuess:function () {
+                if(confirm('玩家依次讨论发言')){
+                    fsm.guess();
+                    old();
+                    check();
+                }
+            },
+            onAfterVote:function () {
+                old();
+                check();
+                window.location.href="task6.html";
+            }
+        }
+    });
+    function old() {
+        var a=$('h5');
+        var b=$('.triangle-l');
+        console.log('i='+i);
+        var ck=sessionStorage['checkout'];
+        if(!ck){
+            i=0;
+        }
+        else {
+            if(ck.length<21){i=ck[ck.length-1];}
+            else {i=ck[ck.length-2]+ck[ck.length-1];}}
+        if(fsm.state==='second'){
+            if(parseInt(i)===0) {
+                a[parseInt(i)].style.backgroundColor="rgb(130, 175, 155)";
+                b[parseInt(i)].style.borderRightColor="rgb(130, 175, 155)";
+            }
+            else {
+                a[parseInt(i)+1].style.backgroundColor="rgb(130, 175, 155)";
+                b[parseInt(i)+1].style.borderRightColor="rgb(130, 175, 155)";
+            }
+        }
+        if(fsm.state==='third'){
+            a[parseInt(i)+1].style.backgroundColor="rgb(130, 175, 155)";
+            b[parseInt(i)+1].style.borderRightColor="rgb(130, 175, 155)";
+        }
+        if(fsm.state==='forth'){
+            a[parseInt(i)+1].style.backgroundColor="rgb(130, 175, 155)";
+            b[parseInt(i)+1].style.borderRightColor="rgb(130, 175, 155)";
+        }
+        if(fsm.state==='first'){
+            a[parseInt(i)+1].style.backgroundColor="rgb(130, 175, 155)";
+            b[parseInt(i)+1].style.borderRightColor="rgb(130, 175, 155)";
+        }
+    }
+    (function () {
+            var a=$('h5');
+            var b=$('.day');
+            var c=$('.pull-down');
+            var d=$('.triangle-l');
+            var ck=sessionStorage['checkout'];
+            var dy=sessionStorage['day'];
+            if(ck.length<21) {
+                for (i = 0; i <= ck[ck.length - 1]; i++) {
+                    a[i].style.backgroundColor = "rgb(130, 175, 155)";
+                    d[i].style.borderRightColor="rgb(130, 175, 155)";
+            }
+                for (k = 0, m = 1; k < dy.length; k += 2, m++) {
+                    b[m].style.display = "block";
+                    c[m].style.display = "block";
+                for (var e = 0; e < m; e++)
+                    c[e].style.display = "none";
+            }
+        }
+        else {
+                for (i = 0; i <=ck[ck.length-2]+ck[ck.length-1]; i++) {
+                    a[i].style.backgroundColor = "rgb(130, 175, 155)";
+                    d[i].style.borderRightColor="rgb(130, 175, 155)";
+                }
+                for (k = 0, m = 1; k < dy.length; k += 2, m++) {
+                    b[m].style.display = "block";
+                    c[m].style.display = "block";
+                    for (var e = 0; e < m; e++)
+                        c[e].style.display = "none";
+                }
+            }
+    }());
+    (function () {
+        var died=$('.died');
+        var dieN=$('.dieN');
+        var dieid=$('.dieid');
+        var moon=$('.moon');
+        var borL=$('.bor-l');
+        for(var i=0,j=0;i<33;i+=2,j++){
+            if(sessionStorage['endnum'+i+'']) {
+                dieN[i].innerHTML = sessionStorage['endnum' + i + ''];
+                dieN[i + 1].innerHTML = sessionStorage['endnum' + i + ''];
+                died[j].style.display='block';
+                moon[i].style.marginBottom='52px';
+                borL[j].style.height='210px';
+            }
+            if(sessionStorage['endhtml'+j+'']) {
+                dieid[j].innerHTML = sessionStorage['endhtml' + j + ''];
+            }
+        }
+    }());
+    if(sessionStorage['judge'][0]==='1'){
+        alert('游戏已经结束');
+        window.location.href='task4.html';
+    }
+</script>
+</body>
+</html>

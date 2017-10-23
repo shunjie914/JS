@@ -6,20 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>法官日记</title>
-    <link rel="stylesheet" href="cssreset.css">
-    <link rel="stylesheet" href="task4.css">
-    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/cssreset.css">
+    <link rel="stylesheet" href="../css/task4.css">
+    <script src="../js/jquery.min.js"></script>
     <style>
         .box3{display: none}
     </style>
 </head>
 <body>
 <header class="fixt">
-    <img src="list.png" class="img poa list">
-    <div class="box1 tc">
         <h2>法官日记</h2>
-    </div>
-    <img src="off.png" class="img poa off">
 </header>
 <div class="fl" style="padding-bottom: 150px;width: 100%">
     <div class="box3 por">
@@ -96,7 +92,7 @@
     </div>
 </div>
 <footer class="fixb">
-    <a href=""><button type="submit" class="fot-btn">法官台本</button></a>
+    <button type="submit" class="fot-btn" onclick="next()">法官台本</button>
 </footer>
 <script>
     var arrary=sessionStorage['narrary'];
@@ -107,6 +103,18 @@
         num[j].style.display='block';
         id[j].innerHTML=arrary[i]+arrary[i+1];
         number[j].innerHTML=j+1+"号";
+    }
+    if(sessionStorage['color']){
+        $('.fot-btn').html('返回');
+    }
+    function next() {
+        if(!sessionStorage['color']){window.location.href="task5.html";}
+        else {window.location.href="task7.html";}
+    }
+    var box=document.getElementsByClassName('box3-t');
+    var color=sessionStorage['color'];
+    for(var n=0;n<color.length;n+=2){
+        box[color[n]].style.backgroundColor='rgb(130, 175, 155)';
     }
 </script>
 

@@ -4,7 +4,7 @@ header {
     top:0;
     z-index: 1;
     width: 100%;
-    height: 50px;
+    padding: 10px 0;
     background-color: #34BEDE;
     border-bottom: solid 1px #FFFFFF;
 }
@@ -13,15 +13,14 @@ body {
     padding-top: 50px;
 }
 h3 {
-    font-size: 18px;
-    font-weight: normal;
+    font-size: 21px;
+    font-weight: 700;
     color: #FFFFFF;
-    margin-top: 10px;
     text-align: center;
 }
 .body {
     width: 70%;
-    height: 300px;
+    height: 370px;
     margin: 30px 15%;
     text-align: center;
     border: solid 2px #FFFFFF;
@@ -45,7 +44,7 @@ h3 {
     width: 30px;
     color: #ED6F7B;
     border-radius: 50%;
-    border-top: solid 2px #FFEDC5;
+    border: solid 2px #FFEDC5;
     background-color: #FFFFFF;
 }
 .bottom {
@@ -54,4 +53,13 @@ h3 {
     color: #F8BD4A;
     padding: 40px 5%;
     text-align: left;
+}
+.back3 {
+	position: absolute;
+	left: 4%;
+    display: inline-block;
+    height: 23px;
+}
+h4{
+	color: #34BEDE;
 }
